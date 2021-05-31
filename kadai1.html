@@ -47,7 +47,7 @@ var textureLoader = new THREE.TextureLoader();
   scene.add(Sphere);
 
   // 角すいを作成
-  var geometry3 = new THREE.coneGeometry( 0.5,1.5 );
+  var geometry3 = new THREE.coneGeometry( 0.5,1 );
   var cone = new THREE.Mesh(geometry3, mat);
   cone.position.set(-1.5,0,-5);
   scene.add(cone);
