@@ -46,11 +46,11 @@ var textureLoader = new THREE.TextureLoader();
   Sphere.position.set(0,0,-5);
   scene.add(Sphere);
 
-  // 円柱を作成
-  var geometry3 = new THREE.CylinderGeometry( 0, 0.5, 1, 20, 4 );
-  var Cylinder = new THREE.Mesh(geometry3, mat);
-  Cylinder.position.set(-1.5,0,-5);
-  scene.add(Cylinder);
+  // 角すいを作成
+  var geometry3 = new THREE.coneGeometry( 0.5,1.5 );
+  var cone = new THREE.Mesh(geometry3, mat);
+  cone.position.set(-1.5,0,-5);
+  scene.add(cone);
 
   // 平行光源
   var directionalLight1 = new THREE.DirectionalLight(0xffffff);
