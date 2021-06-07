@@ -25,17 +25,14 @@
     // シーンを作成
     var scene = new THREE.Scene();
   
-   // カメラを作成
-const camera = new THREE.PerspectiveCamera(45, width / height);
-// カメラの初期座標を設定
-camera.position.set(0, 0, 1000);
-// カメラコントローラーを作成
-const controls = new THREE.OrbitControls(camera,document.body);
-var textureLoader = new THREE.TextureLoader();  
-  var texture = textureLoader.load("ピカチュウ.png");
-  var mat = new THREE.MeshPhongMaterial();
-  mat.map = texture;
+    // カメラを作成
+     const camera = new THREE.PerspectiveCamera(45, width / height);
+     // カメラの初期座標を設定
+     camera.position.set(0, 0, 1000);
 
+     // カメラコントローラーを作成
+     const controls = new THREE.OrbitControls(camera,document.body);
+    
   // 箱を作成
   var geometry1 = new THREE.BoxGeometry(1, 1, 1);
   var box = new THREE.Mesh(geometry1, mat);
