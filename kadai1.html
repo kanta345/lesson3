@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>sample_Mapping2</title>
-
+　<script src="OrbitControls.js"></script>
   <!-- three.jsを読み込む(ローカル) -->
   <!-- <script src="./three.js"></script> -->
   <!-- three.jsを読み込む(CDN) -->
@@ -25,10 +25,12 @@
     // シーンを作成
     var scene = new THREE.Scene();
   
-    // カメラを作成
-  var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-
-// テクスチャー読み込み
+   // カメラを作成
+const camera = new THREE.PerspectiveCamera(45, width / height);
+// カメラの初期座標を設定
+camera.position.set(0, 0, 1000);
+// カメラコントローラーを作成
+const controls = new THREE.OrbitControls(camera,document.body);
 var textureLoader = new THREE.TextureLoader();  
   var texture = textureLoader.load("ピカチュウ.png");
   var mat = new THREE.MeshPhongMaterial();
